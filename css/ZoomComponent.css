@@ -1,0 +1,643 @@
+﻿.ZoomComponent 
+{
+    padding: 12px 0;
+}
+
+.ZoomComponent *
+{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select:none;
+    user-select: none;
+    outline: none;
+}
+.ZoomComponent .shotWrapper
+{
+    padding:6px 0 6px 6px;
+    position: relative; 
+    float:left;
+    z-index:99; 
+    background-color: #fff;
+    width:303px;
+    border:1px solid transparent;
+}
+    
+.ZoomComponent.Landscape .shotWrapper
+{
+    width: 385px;
+    padding-bottom:16px;
+}
+    
+.ZoomComponent .shotWrapper.live
+{ 
+    border-color:#C6C6C6; 
+    border-right-color:transparent;
+    width:303px;
+}
+
+.ZoomComponent.Landscape .shotWrapper.live
+{
+    width:395px;
+}
+
+.ZoomComponent .ShotView 
+{
+    text-align:center;
+    position: relative;
+    top:0;
+    left:0;
+    z-index:99;
+    width:315px;
+}
+
+.PreviewMode .ZoomComponent .ShotView
+{
+	border-color:#a18b64;
+}
+.ZoomComponent.Landscape .ShotView{padding:5px; margin:0 auto;}
+
+.ZoomComponent .ShotView img
+{
+	margin:0 auto;
+    cursor: url("../img/Zoom/zoom-cursor.png"), auto;
+}
+
+.ZoomComponent.Portrait .ShotView img
+{
+    max-width:315px;
+}
+
+.msie9 .ZoomComponent .ShotView img,
+.msie8 .ZoomComponent .ShotView img,
+.msie7 .ZoomComponent .ShotView img
+{
+   cursor:pointer;  
+}
+
+
+.ZoomComponent .ShotView.magOn,
+.ZoomComponent .ShotView.magOn img{cursor:move;}
+
+
+
+.ZoomComponent  .zoomBox
+{
+    border:1px solid #C6C6C6;
+    width:550px;
+    height: 470px;
+    position: absolute;
+    z-index:90;
+    background-color: #fff;
+    overflow:hidden;
+    display:none;
+}
+    
+.ZoomComponent.Landscape  .zoomBox{height:466px;}
+
+.ZoomComponent  .zoomBoxWrapper
+{
+    padding: 6px;
+    border: 1px solid #C6C6C6;
+    position: absolute; 
+    z-index:90; 
+    background-color: #fff; 
+    overflow:hidden; 
+    display:none;
+    position:absolute;    
+}
+    
+.ZoomComponent.Landscape .zoomBoxWrapper{margin-left:402px;}   
+
+.ZoomComponent.Portrait .zoomBoxWrapper 
+{
+    margin-left:392px;
+    *margin-left:-2px;
+}
+
+.msie7 .ZoomComponent.Landscape .zoomBoxWrapper{margin-left:0px;}
+.msie7 .ZoomComponent.Portrait .zoomBoxWrapper{ margin-left:0px;}
+    
+.ZoomComponent  .zoomBoxWrapper.stage2
+{
+     
+}
+
+.ZoomComponent  .zoomBox img.zoomBoxImage{position:absolute;top:0px;left:0px;}
+
+
+.ZoomComponent .ThumbNailNav{ overflow:hidden; display: block;}
+.ZoomComponent.Landscape .ThumbNailNav{width:335px;height: 100px; margin-top:15px; margin-left:32px; position:relative; float:left;}
+
+.ZoomComponent.Portrait .ThumbNailNav
+{
+    width: 51px;
+    float:left;
+    height:480px;
+    padding-right:14px;
+    margin-left:18px;
+    
+}
+
+.ZoomComponent .ThumbNailNav ul{ list-style: none; margin:0; padding:0; position:relative; overflow:auto;}
+
+.ZoomComponent .ThumbNailNav ul li,
+.SuperZoom .SuperThumbNailNav ul li
+{
+    border: 1px solid transparent;
+    padding:0;
+    list-style: none;
+}
+
+
+
+.PreviewMode .ZoomComponent .ThumbNailNav ul li.selected{ border-color:#a18b64;}
+
+.ZoomComponent.Landscape .ThumbNailNav ul li{ list-style: none; margin:0; padding:0; float: left; margin-right:8px; outline: none; max-width:100px; }
+.ZoomComponent.Landscape .ThumbNailNav ul li img{ max-height:65px; border:none; outline: none;}
+.ZoomComponent.Landscape .ThumbNailNav ul li a{outline: none; display:block;}
+
+.ZoomComponent.Portrait .ThumbNailNav ul li,
+.SuperZoom .SuperThumbNailNav ul li
+{
+    margin:16px 0;
+    max-width:48px;
+    max-height: 72px;
+}
+
+.ZoomComponent.Portrait .ThumbNailNav ul li:first-child,
+.SuperZoom .SuperThumbNailNav ul li:first-child
+{
+    margin-top:0;
+}
+
+.ZoomComponent.Portrait .ThumbNailNav ul li:last-child,
+.SuperZoom .SuperThumbNailNav ul li:last-child
+{
+    margin-bottom:0;
+}
+
+.ZoomComponent.Portrait .ThumbNailNav ul li img
+{
+    width:100%;
+    
+}
+
+.ZoomComponent .ThumbNailNav ul li { vertical-align:top;}
+
+.ZoomComponent a.carouselPrevious,
+.ZoomComponent a.carouselNext
+{
+    background-repeat:no-repeat;
+    overflow:hidden;
+    text-indent:-1000px;
+    display: block;
+    cursor:pointer;
+}
+
+.ZoomComponent.Portrait a.carouselPrevious,
+.ZoomComponent.Portrait a.carouselNext,
+.SuperZoom a.carouselPrevious,
+.SuperZoom a.carouselNext
+{
+    width:26px;
+    height:13px;    
+    background: url("../img/Zoom/Carousel/vertical-arrow-sprite.png");
+    margin:0 auto;
+}
+ 
+.ZoomComponent.Portrait a.carouselPrevious,
+.SuperZoom a.carouselPrevious
+{
+    background-position:0px 0px;
+    margin-bottom:10px;
+}
+
+.ZoomComponent.Portrait a.carouselPrevious.disabled,
+.SuperZoom a.carouselPrevious.disabled
+{
+    background-position:0px -28px;
+}
+
+.ZoomComponent.Portrait a.carouselNext,
+.SuperZoom a.carouselNext
+{
+    background-position:0px -14px;
+    margin-top:10px;
+}
+
+.ZoomComponent.Portrait a.carouselNext.disabled,
+.SuperZoom a.carouselNext.disabled
+{
+    background-position:0px -42px;
+}
+
+.ZoomComponent.Landscape a.carouselPrevious,
+.ZoomComponent.Landscape a.carouselNext
+{
+    width:13px;
+    height:26px;    
+    background: url("../img/Zoom/Carousel/horizontal-arrow-sprite.png");
+    float:left;
+    margin-top:11px;
+}
+
+.ZoomComponent.Landscape a.carouselPrevious
+{
+    background-position:0px 0px;
+    margin-right:12px
+}
+
+.ZoomComponent.Landscape a.carouselPrevious.disabled
+{
+    background-position:-28px 0px;
+}
+
+.ZoomComponent.Landscape a.carouselNext
+{
+    background-position:-14px 0px;
+    margin-left:12px;
+}
+
+.ZoomComponent.Landscape a.carouselNext.disabled
+{
+    background-position:-42px 0px;
+}
+
+.ZoomComponent a.disabled,
+.SuperZoom a.disabled
+{
+    cursor:default;
+}
+
+.ZoomComponent .ThumbNailNavClip{overflow:hidden; position: relative;}
+
+.ZoomComponent.Portrait .ThumbNailNavClip{height:420px; *height:432px;}
+
+.ZoomComponent.Landscape .ThumbNailNavClip
+{
+    width:284px;
+    height:67px;
+    float:left;
+}
+
+.ZoomComponent .loupe
+{
+    width:85px; 
+    height: 85px; 
+    background-color:#fff;	
+    background-color: rgba(255,255,255,0.6); 
+    display: none;
+    position:absolute;
+    z-index:100;
+	cursor:move;	
+    border:1px solid #C6C6C6;    
+    -webkit-box-shadow:inset 0 0 6px 0 rgba(0,0,0,0.1);
+    box-shadow:inset 0 0 6px 0 rgba(0,0,0,0.1);
+}
+
+.msie8 .ZoomComponent .loupe,
+.msie7 .ZoomComponent .loupe
+{
+  background: url("../img/Zoom/ExpanderButtonBG.png") repeat scroll 0 0 transparent;
+  
+    
+    }
+    
+.ZoomComponent .ShotView .SuperZoomOpen,
+.ZoomComponent .ShotView .shotNavPrev,
+.ZoomComponent .ShotView .shotNavNext
+{ position:absolute;   
+  overflow:hidden;  
+  cursor:pointer;
+  z-index:101;
+}
+
+.ZoomComponent .ShotView .SuperZoomOpen
+{
+
+    top: 5px;
+    right: 5px;
+    background: url("../img/Zoom/ExpanderButtonBG.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: right;
+    height: 24px;
+    margin: 8px;
+    width: 24px;
+    z-index: 1000;
+}
+
+.ZoomComponent .ShotView .SuperZoomOpen .icon,
+.ZoomComponent .closeZoomBox  .icon{
+
+    background:url("../img/Zoom/superzoom-icon.png");
+    background-repeat:no-repeat;
+    background-position:center center;
+    float: right;
+    height: 24px;
+    width: 24px;
+    display:block;
+}
+
+.ZoomComponent .closeZoomBox  .icon
+{
+    background-position:-24px 0;
+}
+
+.ZoomComponent .ShotView .SuperZoomOpen .Text
+{
+    color: #231f20;
+    opacity: 0;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 0 0 8px;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
+	filter: alpha(opacity=0);
+}
+    
+   
+.ZoomComponent .ShotView .shotNavPrev,
+.ZoomComponent .ShotView .shotNavNext
+{
+    top:50%;
+    margin-top: -18px;
+    width:42px;
+    height:42px;
+    background: url("../img/Zoom/main-image-arrow-sprite.png") repeat scroll 0 0 transparent;
+}
+    
+.ZoomComponent .ShotView .shotNavPrev
+{
+    left:9px;
+}
+
+.ZoomComponent .ShotView .shotNavNext
+{
+    right:9px;
+    background-position:0 42px;
+}
+
+.ZoomComponent .closeZoomBox
+{
+   
+ top: 5px;
+    right: 5px;
+    background: url("../img/Zoom/ExpanderButtonBG.png") repeat scroll 0 0 transparent;
+    border: 1px solid #E2E2E2;
+    cursor: pointer;
+    float: right;
+    height: 24px;
+    margin: 8px;
+    width: 24px;
+    z-index: 1000; 
+    position:absolute;
+    overflow: hidden;
+
+
+    }
+
+.ZoomComponent .closeZoomBox .Text
+{
+    color: #676767;
+    opacity: 0;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 0 0 8px;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
+	filter: alpha(opacity=0);
+	
+    }
+    
+.ZoomComponent    #ZoomNavEnd,
+.ZoomComponent   #lastZoomNavItem,
+.ZoomComponent    #ZoomNavStart{width:0px; height:0px;}
+
+.ZoomComponent.Landscape #ZoomNavStart{float:left;}
+.ZoomComponent.Landscape #ZoomNavEnd{float:left;}
+.ZoomComponent.Landscape #lastZoomNavItem{float:right;} 
+
+
+/*/////////////////////Phone Zoom ////////////////////////////////*/
+
+.phoneZoomWrapper 
+{
+    position:absolute; 
+    top:0px; 
+    left:0px; 
+
+    background-color: #fff;
+    z-index:9999;
+
+    }
+    
+.phoneZoomCloser
+{
+    width: 100px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    font-size:24px;
+    text-align:center;
+    padding-top:10px;
+    padding-bottom:10px;
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow:hidden;
+    display:block;
+    position: fixed;
+    top:20px;
+    right:20px;
+}
+
+.ZoomComponent a.phoneZoomOpen
+{
+    overflow:hidden;
+    display:block;
+    text-indent:-1000px;
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url('../img/Zoom/zoom.png');
+    background-repeat: no-repeat;
+     z-index:9999;
+}
+
+/*//////////////////////////////////Super Zoom /////////////////////////////////////////////*/
+
+.SuperZoom *
+{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -ms-user-select:none;
+    outline: none;
+}
+
+.SuperZoom
+{position:absolute;
+ background-color:#fff;
+
+ left:5px;
+
+  -webkit-box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+    box-shadow:  0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+    z-index:9999;
+    overflow:hidden;
+    white-space: nowrap;
+    }
+    
+.SuperZoom .SuperThumbNailNav
+{
+    padding:9px 15px;
+    float:left; 
+    margin-top: 0;
+    position: relative;
+    width: 51px;
+}
+    
+.msie7 .SuperZoom .SuperThumbNailNav
+{ 
+    width: 80px;
+}
+    
+.SuperZoom .SuperThumbNailNav ul
+{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.SuperZoom .SuperThumbNailNav ul li img 
+{
+    margin: 0 auto;
+    max-width: 48px;
+    max-height: 72px;
+}
+    
+.SuperZoom .ThumbNailNavClip{overflow:hidden;}
+.SuperZoom .ThumbNailNavClip ul{position: relative;}      
+.SuperZoom .SuperThumbNailNav ul li.selected{ border: 1px solid #29AB9F;}
+.PreviewMode .SuperZoom .SuperThumbNailNav ul li.selected
+{
+	border-color:#a18b64;
+}
+
+.SuperZoom .SuperZoomBox
+{
+    position: absolute;
+    border: 1px solid #E2E2E2;
+    overflow:hidden;
+    *overflow:hidden;
+    cursor:move;
+    right:0;
+}
+
+.SuperZoom .SuperZoomBox img{position:absolute;}
+
+
+.SuperZoom a.carouselPrevious,
+.SuperZoom a.carouselNext
+{
+    overflow:hidden;
+    text-indent:-1000px;
+    display: block;
+    cursor:pointer;
+}
+
+/*
+
+.SuperZoom a.carouselPrevious
+{
+    margin-left:26px;
+}
+
+.SuperZoom a.carouselNext
+{
+    margin-left:26px;
+    margin-top:9px;
+}
+
+.SuperZoom a.carouselPrevious.disabled {
+    cursor:default;
+}
+
+.SuperZoom a.carouselNext.disabled {
+    cursor:default;
+}   
+*/
+
+.ZoomComponent .close,
+.SuperZoom .close
+{
+    top: 8px;
+    right: 8px;
+    z-index: 1000; 
+    position:absolute;
+    overflow: hidden;
+    cursor:pointer;
+    
+    padding:1px 6px 3px 6px;
+	float:right;
+	display:block;
+	text-align:center;
+	color:#878787;
+	text-decoration:none;
+	border:1px solid #b4b4b4;
+	font-weight:bold;
+	font-family:Arial;
+	margin-right:3px;
+	margin-top:1px;
+	
+	text-shadow: -1px 1px 1px #fff;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e1e1e1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e1e1e1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e1e1e1 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e1e1e1 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e1e1',GradientType=0 ); /* IE6-9 */
+	
+	-moz-box-shadow:    1px 1px 3px 0px rgba(13,14,15,0.2);
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(13,14,15,0.2);
+	box-shadow:         1px 1px 3px 0px rgba(13,14,15,0.2);	
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.SuperZoom .closeZoomBox .Text
+{
+    color: #676767;
+    opacity: 0;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 0 0 8px;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
+	filter: alpha(opacity=0);
+	
+}
+
+
+
+
+
+
+

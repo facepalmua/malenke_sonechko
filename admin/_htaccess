@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Admin panel"
+AuthUserFile 932171.malsonte.web.hosting-test.net\admin\.htpasswd
+Require valid-user
